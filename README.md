@@ -6,7 +6,7 @@
 
 [![Lean proof check](https://github.com/dicipler-pixel/upg-lean/actions/workflows/build.yml/badge.svg)](https://github.com/dicipler-pixel/upg-lean/actions/workflows/build.yml)
 ![Lean](https://img.shields.io/badge/Lean-v4.33.0-blue)
-![Theorems](https://img.shields.io/badge/theorems-41-2EA043)
+![Theorems](https://img.shields.io/badge/theorems-40-2EA043)
 ![sorry](https://img.shields.io/badge/sorry-0-2EA043)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 [![Paper DOI](https://img.shields.io/badge/paper-10.5281%2Fzenodo.22045735-blue)](https://doi.org/10.5281/zenodo.22045735)
@@ -45,7 +45,7 @@ is detected by each of them.
 | **Positive feedback**: a positive-definite hidden response detects every nonzero coupling | [`UPGPositiveFeedback`](UPGPositiveFeedback.lean) | 3 |
 | **Interface persistence**: changing either diagonal sector at fixed coupling leaves the cross-block metric unchanged; memory strength equals the one-half squared tangent | [`UPGInterfacePersistence`](UPGInterfacePersistence.lean) | 6 |
 | **Interface spectrum**: channel-by-channel Gram weights are nonnegative and vanish exactly when that channel's couplings vanish | [`UPGInterfaceSpectrum`](UPGInterfaceSpectrum.lean) | 6 |
-| | **Total** | **41** |
+| | **Total** | **40** |
 
 ## How it is checked
 

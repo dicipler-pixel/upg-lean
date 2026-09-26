@@ -33,7 +33,7 @@
       "path": "UPGInterfaceSpectrum.lean"
     }
   ],
-  "expected_theorems": 41,
+  "expected_theorems": 40,
   "expected_false_controls": 1,
   "root_imports": [
     "UPGPositiveFeedback",
