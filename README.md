@@ -9,7 +9,7 @@
 ![Theorems](https://img.shields.io/badge/theorems-40-2EA043)
 ![sorry](https://img.shields.io/badge/sorry-0-2EA043)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
-[![Paper DOI](https://img.shields.io/badge/paper-10.5281%2Fzenodo.22045735-blue)](https://doi.org/10.5281/zenodo.22045735)
+[![Paper DOI](https://img.shields.io/badge/paper-10.5281%2Fzenodo.21305024-blue)](https://doi.org/10.5281/zenodo.21305024)
 
 Jeromie Beasley
 
@@ -67,7 +67,7 @@ python3 scripts/verify.py
 ## The paper
 
 *Universal Projector Geometry from Electrical Measurements*, Jeromie Beasley. DOI
-[10.5281/zenodo.22045735](https://doi.org/10.5281/zenodo.22045735).
+[10.5281/zenodo.21305024](https://doi.org/10.5281/zenodo.21305024).
 
 ## Citation, licence and AI use
 
