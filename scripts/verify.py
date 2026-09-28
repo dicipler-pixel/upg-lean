@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-# SCRIPT: DIRAC-TIME-LEAN-VERIFY-01
-"""Audit the Dirac Time Lean library after `lake build`.
+# SCRIPT: UPG-LEAN-VERIFY-01
+"""Audit the UPG Lean library after `lake build`.
 
 Why each check proves what it claims:
 

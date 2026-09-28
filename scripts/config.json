@@ -31,12 +31,32 @@
     {
       "module": "UPGInterfaceSpectrum",
       "path": "UPGInterfaceSpectrum.lean"
+    },
+    {
+      "module": "UPGAlgebra",
+      "path": "UPGAlgebra.lean"
+    },
+    {
+      "module": "UPGTorusAnchor",
+      "path": "UPGTorusAnchor.lean"
+    },
+    {
+      "module": "UPGObstruction",
+      "path": "UPGObstruction.lean"
+    },
+    {
+      "module": "UPGDiracRefraction",
+      "path": "UPGDiracRefraction.lean"
     }
   ],
-  "expected_theorems": 40,
+  "expected_theorems": 104,
   "expected_false_controls": 1,
   "root_imports": [
     "UPGPositiveFeedback",
-    "UPGInterfaceSpectrum"
+    "UPGInterfaceSpectrum",
+    "UPGAlgebra",
+    "UPGTorusAnchor",
+    "UPGObstruction",
+    "UPGDiracRefraction"
   ]
 }
