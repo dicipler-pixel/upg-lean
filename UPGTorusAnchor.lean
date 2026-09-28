@@ -192,7 +192,7 @@ theorem abs_arg_le_half_pi_mul (z : ℂ) (hz : ‖z‖ = 1) :
   have hpos : 0 ≤ Real.sin (|θ| / 2) :=
     Real.sin_nonneg_of_nonneg_of_le_pi h0 (by linarith [Real.pi_pos])
   have habs : |Real.sin (θ / 2)| = Real.sin (|θ| / 2) := by
-    rcases le_or_lt 0 θ with h | h
+    rcases le_or_gt 0 θ with h | h
     · rw [abs_of_nonneg h] at hpos ⊢
       exact abs_of_nonneg hpos
     · rw [abs_of_neg h] at hpos ⊢

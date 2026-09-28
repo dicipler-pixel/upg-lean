@@ -59,7 +59,7 @@ theorem normalized_path_obstruction (a ε : ℝ) :
     have h := ((((hasDerivAt_pow 5 x).div_const 5).sub
       (((hasDerivAt_pow 3 x).const_mul (2 * a ^ 2)).div_const 3)).add
       ((hasDerivAt_id x).const_mul (a ^ 4))).add ((hasDerivAt_id x).const_mul ε)
-    convert h using 1 <;> first | (funext t; simp) | (norm_num; try ring)
+    exact h.congr_deriv (by norm_num <;> ring)
   have hint : IntervalIntegrable (fun x : ℝ => x ^ 4 - 2 * a ^ 2 * x ^ 2 + a ^ 4 + ε)
       MeasureTheory.volume 0 a := by
     apply Continuous.intervalIntegrable

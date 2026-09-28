@@ -109,7 +109,7 @@ theorem redistribution_eq_zero_iff_commute (Ω P : R) (hP : P * P = P) :
       have : P * Ω * (1 - P) = P * Ω - P * Ω * P := by noncomm_ring
       rw [← this, ← e2]
     rw [sub_eq_zero] at a b
-    rw [a, b]
+    exact a.trans b.symm
   · intro hc
     have e : redistributionOp Ω P = ((1 - P) * P) * Ω + Ω * (P * (1 - P)) := by
       unfold redistributionOp

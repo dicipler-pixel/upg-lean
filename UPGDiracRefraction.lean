@@ -65,9 +65,7 @@ theorem sectorProjector_idem (u : ℂ) (hu : ‖u‖ = 1) :
   ext i j
   fin_cases i <;> fin_cases j <;>
     simp [sectorProjector, Matrix.mul_apply, Fin.sum_univ_two] <;>
-    first
-    | ring
-    | linear_combination (1 / 4 : ℂ) * hc
+    first | ring1 | linear_combination (1 / 4 : ℂ) * hc
 
 /-- The sector projector has trace one: it projects onto one line. -/
 theorem sectorProjector_trace (u : ℂ) : Matrix.trace (sectorProjector u) = 1 := by
