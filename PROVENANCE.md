@@ -12,3 +12,10 @@ every UPG branch that carries them.
 
 The feedback criterion of `UPGFeedback` passed CI in PR #28 (Actions run 34698809495). The
 check in this repository is the verification of the complete set.
+
+## Modules written for the v3.2 edition
+
+`UPGAlgebra`, `UPGTorusAnchor`, `UPGObstruction` and `UPGDiracRefraction` were written for this
+repository from *Universal Projector Geometry from Electrical Measurements*, edition v3.2
+(September 2026, source `upg_final_v3_2.tex`), and are first checked here. Each theorem's
+docstring names the section or result it formalizes.
