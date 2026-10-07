@@ -21,10 +21,11 @@ Jeromie Beasley
 ## The idea in one line
 
 Split a finite system into a retained sector and a hidden one, coupled by a block `B`. The
-retained sector runs on its own exactly when `B = 0`, and every finite diagnostic of that
-coupling agrees: the commutator `[H, P]`, the redistribution operator, the zero-time memory
-Gram `B Bᵀ` and the cross-block projector metric all vanish together, and a nonzero coupling
-is detected by each of them.
+Hamiltonian commutes with the retained projector, `[H, P] = 0` (the finite condition for the
+retained sector to evolve on its own), exactly when `B = 0`. The commutator `[H, P]`, the
+redistribution operator and the zero-time memory Gram `B Bᵀ` vanish together, each of them
+detects a nonzero coupling, and the cross-block projector metric, with the conventional
+one-half normalization, equals the coupling energy `Σ Bᵢⱼ²`.
 
 ## Start here
 
@@ -42,14 +43,14 @@ is detected by each of them.
 | **Adapted block form**: exact block form of `[H, P]`; four equivalent diagnostics of retained–hidden coupling | [`UPGBlockFeedback`](UPGBlockFeedback.lean) | 7 |
 | **Projector metric**: the feedback Gram's trace is the squared coupling energy; the two oriented cross blocks of `[H, P]` carry equal energy; the factor-of-two identity | [`UPGProjectorMetric`](UPGProjectorMetric.lean) | 7 |
 | **Projector dynamics**: a two-sided transport with endpoint derivatives `K` and `−K`; the finite bridge to the adapted generator | [`UPGProjectorDynamics`](UPGProjectorDynamics.lean) | 3 |
-| **Resolvent feedback**: a Gram-factorized hidden response reduces to the zero-time Gram; nonzero coupling cannot give zero factorized feedback | [`UPGResolventFeedback`](UPGResolventFeedback.lean) | 3 |
+| **Resolvent feedback**: a Gram-factorized hidden response reduces to the zero-time Gram; when the Gram factor `C` has a right inverse, nonzero coupling cannot give zero factorized feedback | [`UPGResolventFeedback`](UPGResolventFeedback.lean) | 3 |
 | **Positive feedback**: a positive-definite hidden response detects every nonzero coupling | [`UPGPositiveFeedback`](UPGPositiveFeedback.lean) | 3 |
 | **Interface persistence**: changing either diagonal sector at fixed coupling leaves the cross-block metric unchanged; memory strength equals the one-half squared tangent | [`UPGInterfacePersistence`](UPGInterfacePersistence.lean) | 6 |
 | **Interface spectrum**: channel-by-channel Gram weights are nonnegative and vanish exactly when that channel's couplings vanish | [`UPGInterfaceSpectrum`](UPGInterfaceSpectrum.lean) | 6 |
 | **The redistribution operator in general** (v3.2, Theorems 1.2–1.3, Proposition 1.5): `F = ΩΠ + ΠΩ − 2ΠΩΠ = [Ω,Π]Π + Π[Π,Ω]`, `ΠFΠ = 0`, `(1−Π)F(1−Π) = 0` and `F = 0 ⇔ [Ω,Π] = 0` for an idempotent in any ring; `Tr F = 0`; and the complex adapted pair with the conjugate transpose: `[H,Π] = [[0,−B],[Bᴴ,0]]`, `[H,Π]² = −diag(BBᴴ, BᴴB)`, `Tr([H,Π]ᴴ[H,Π]) = 2 Tr K(0)`, all four diagnostics equivalent to `B = 0` | [`UPGAlgebra`](UPGAlgebra.lean) | 18 |
-| **The noncommutative torus anchor** (Section 4.4): the relator has determinant one; the winding record is an integer with `2|w| + 1 ≤ d`; half-angle readouts; the admissible domain `δ + g² ≤ 4` and forced refusal; the amplitude floor `|w| ≤ (d/4)√δ`, so `w ≠ 0 ⇒ d²δ ≥ 16`; clock and shift `UV = ωVU`, scalar relator `ωI`, `δ = 4 sin²(π/d)`, `g² = 4 cos²(π/d)`, `w = 1` for `d ≥ 3`, refusal at `d = 2` | [`UPGTorusAnchor`](UPGTorusAnchor.lean) | 23 |
+| **The noncommutative torus anchor** (Section 4.4): the relator has determinant one; the winding record is an integer, with `2|w| + 1 ≤ d` when the guard is open (no eigenvalue at `−1`); half-angle readouts; the admissible domain `δ + g² ≤ 4` and forced refusal; the amplitude floor `|w| ≤ (d/4)√δ`, so `w ≠ 0 ⇒ d²δ ≥ 16`; clock and shift `UV = ωVU`; for unitaries with `UV = ωVU` the relator is the scalar `ωI`; `δ = 4 sin²(π/d)`, `g² = 4 cos²(π/d)`, `w = 1` for `d ≥ 3`, refusal at `d = 2` | [`UPGTorusAnchor`](UPGTorusAnchor.lean) | 23 |
 | **Obstruction and gluing** (Theorems 4.2–4.3): the pointwise floor `ε`, the window floor `9a⁴/16`, the normalized-path value `(16/15)a⁵ + 2aε`; one-channel gluing `log(ab − e²) = log a + log b + log(1 − e²/ab)` with a nonpositive anomaly that vanishes exactly at `e = 0`; the multi-channel sign `Σ log(1 − μₖ) ≤ 0` with equality exactly when every `μₖ = 0` | [`UPGObstruction`](UPGObstruction.lean) | 9 |
-| **Dirac sector and refraction** (Sections 2, 4.1, 6, 8): `{σ₃, D} = 0` for every off-diagonal `D`; a Hermitian off-diagonal block squares to `|w|² I`; the sector projector is idempotent with trace one; the phase-law numerator; `ln(1 + a*) = π²/12`; rigidity in `(0, 1/η]` with the cap exactly at a kernel; the refraction law `R₁(E−V₁)sin²θ₁ = R₂(E−V₂)sin²θ₂`, the turning barrier and the regularized law; two oblique rank-one idempotents with `Tr(Π₀Π₁) = 2` | [`UPGDiracRefraction`](UPGDiracRefraction.lean) | 14 |
+| **Dirac sector and refraction** (Sections 2, 4.1, 6, 8): `{σ₃, D} = 0` for every off-diagonal `2 × 2` matrix `D`; a Hermitian off-diagonal block squares to `|w|² I`; the sector projector is idempotent with trace one; the phase-law numerator; the calibration check `ln(1 + a*) = π²/12` for `a* = e^{π²/12} − 1`; rigidity in `(0, 1/η]` with the cap exactly at a kernel; the refraction law `R₁(E−V₁)sin²θ₁ = R₂(E−V₂)sin²θ₂`, the turning barrier and the regularized law; two oblique rank-one idempotents with `Tr(Π₀Π₁) = 2` | [`UPGDiracRefraction`](UPGDiracRefraction.lean) | 14 |
 | | **Total** | **104** |
 
 ## How it is checked
